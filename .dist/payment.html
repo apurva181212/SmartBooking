@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment – BookMyEvent</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="payment.css" />
+
+  
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get("title");
+    const amount = urlParams.get("amount");
+    const timing = urlParams.get("timing");
+    const location = urlParams.get("location");
+
+    if (title) {
+      document.getElementById("paymentTitle").innerText = `Pay for "${title}"`;
+    }
+    if (amount) {
+      document.getElementById("amount").value = amount;
+    }
+    if (timing) {
+      document.getElementById("timingText").innerText = timing;
+    }
+    if (location) {
+      document.getElementById("locationText").innerText = location;
+    }
+  });
+</script>
+
+<body>
+  <div class="payment-modal">
+    <div class="payment-box">
+      <h2 id="paymentTitle">Complete Your Payment</h2>
+
+<p class="info-line"><strong>Showtime:</strong> <span id="timingText"></span></p>
+<p class="info-line"><strong>Location:</strong> <span id="locationText"></span></p>
+
+
+      <div class="payment-icons">
+        <img src="images/visa.png" alt="Visa">
+        <img src="images/mastercard.png" alt="MasterCard">
+        <img src="images/upi.png" alt="UPI">
+      </div>
+
+      <form id="paymentForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="method">Payment Method</label>
+        <select id="method" required>
+          <option value="">-- Select --</option>
+          <option value="credit">Credit/Debit Card</option>
+          <option value="upi">UPI</option>
+          <option value="netbanking">Net Banking</option>
+        </select>
+
+        <label for="amount">Amount (INR)</label>
+        <input type="text" id="amount" readonly>
+
+        <button type="submit">Pay Now</button>
+      </form>
+
+      <p class="success-message" id="successMsg">✅ Payment Successful! Thank you 🎉</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer>
+    document.getElementById('paymentForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('successMsg').style.display = 'block';
+      document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const title = urlParams.get("title");
+  const amount = urlParams.get("amount");
+  const timing = urlParams.get("timing");
+  const location = urlParams.get("location");
+
+  if (title) {
+    document.querySelector("h2").innerText = `Pay for "${title}"`;
+  }
+
+  if (amount) {
+    document.getElementById("amount").value = amount;
+  }
+
+  // Optional: Show location/timing if you add fields for them
+});
+
+    });
+  </script>
+</body>
+</html>

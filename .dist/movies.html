@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movies – BookMyEvent</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <script src="js/script.js" defer></script>
+</head>
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="popup-title">Event Details</h2>
+    <p><strong>Price:</strong> <span id="popup-price"></span></p>
+    <p><strong>Timing:</strong> <span id="popup-timing"></span></p>
+    <p><strong>Location:</strong> <span id="popup-location"></span></p>
+    <button class="btn btn-primary">Proceed to Pay</button>
+  </div>
+</div>
+
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">Smart Booking</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="movies.html" class="active">Movies</a></li>
+          <li><a href="concerts.html">Concerts</a></li>
+          <li><a href="standups.html">Stand-Ups</a></li>
+          <li><a href="arts.html">Arts & Literature</a></li>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container category-page">
+    <h2>Movies</h2>
+
+    <section>
+      <h3>Hindi Movies</h3>
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="images/hindi1.jpg" alt="Hindi Movie 1">
+          <div class="event-info"><h4>Pathaan</h4>
+            <button class="btn btn-primary book-btn"
+  data-title="Pathaan"
+  data-price="₹250"
+  data-timing="7:00 PM"
+  data-location="INOX, Mumbai">
+  Book Now
+</button>
+<script src="script.js" defer></script>
+
+
+</div>
+        </div>
+        <div class="event-card">
+          <img src="images/hindi2.jpg" alt="Hindi Movie 2">
+          <div class="event-info"><h4>Gadar 2</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Hollywood Movies</h3>
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="images/hollywood1.jpg" alt="Hollywood Movie 1">
+          <div class="event-info"><h4>Avengers: Endgame</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+        <div class="event-card">
+          <img src="images/hollywood2.jpg" alt="Hollywood Movie 2">
+          <div class="event-info"><h4>Fast & Furious X</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Tamil Movies</h3>
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="images/tamil1.jpg" alt="Tamil Movie 1">
+          <div class="event-info"><h4>Leo</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+        <div class="event-card">
+          <img src="images/tamil2.jpg" alt="Tamil Movie 2">
+          <div class="event-info"><h4>Vikram</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Marathi Movies</h3>
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="images/marathi1.jpg" alt="Marathi Movie 1">
+          <div class="event-info"><h4>Sairat</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+        <div class="event-card">
+          <img src="images/marathi2.jpg" alt="Marathi Movie 2">
+          <div class="event-info"><h4>Timepass</h4><button class="btn btn-primary">Book Now</button></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer"><div class="container footer-bottom"><p>&copy; 2025 BookMyEvent. All rights reserved.</p></div></footer>
+</body>
+</html>
